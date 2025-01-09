@@ -14,7 +14,7 @@ const MovieData = () => {
     const data = await axios.get(
       `http://www.omdbapi.com/?apikey=29c8ed77&s=${searchval}`
     );
-    setMovieData(data?.data?.Search);
+    setMovieData(data.data.Search);
     setLoading(false);
   };
 
