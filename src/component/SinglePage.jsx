@@ -10,10 +10,11 @@ const SinglePage = () => {
 
   const { id } = useParams();
   //fetch single movie data
-  const url = `http://www.omdbapi.com/?apikey=29c8ed77&i=${id}`;
   const getSingleData = async () => {
     setLoading(true);
-    const data = await axios.get(url);
+    const data = await axios.get(
+      `http://www.omdbapi.com/?apikey=29c8ed77&i=${id}`
+    );
     setSingleData(data.data);
     setLoading(false);
   };

@@ -9,10 +9,11 @@ const MovieData = () => {
   const [searchval, setSearchVal] = useState("movie");
   const [loading, setLoading] = useState(true);
 
-  const url = `http://www.omdbapi.com/?apikey=29c8ed77&s=${searchval}`;
   const getMovieData = async () => {
     setLoading(true);
-    const data = await axios.get(url);
+    const data = await axios.get(
+      `http://www.omdbapi.com/?apikey=29c8ed77&s=${searchval}`
+    );
     setMovieData(data?.data?.Search);
     setLoading(false);
   };
@@ -69,7 +70,7 @@ const MovieData = () => {
         <>
           {loading && <Loading />}
           <div className="row px-4 m-5 gap-5">
-            {movieData?.map((movie) => {
+            {movieData.map((movie) => {
               return (
                 <div className="col-2 card py-3 my" key={movie.imdbID}>
                   <NavLink
