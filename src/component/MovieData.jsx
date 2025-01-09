@@ -77,7 +77,7 @@ const MovieData = () => {
                     className={"text-decoration-none"}
                     to={`/singleMovie/${movie?.imdbID}`}
                   >
-                    <div style={{ hover: scale(1.5) }}>
+                    <div>
                       <img
                         src={movie.Poster}
                         alt={movie.Title}
