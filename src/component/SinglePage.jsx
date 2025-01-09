@@ -13,7 +13,7 @@ const SinglePage = () => {
   const getSingleData = async () => {
     setLoading(true);
     const data = await axios.get(
-      `http://www.omdbapi.com/?apikey=29c8ed77&i=${id}`
+      `https://www.omdbapi.com/?apikey=29c8ed77&i=${id}`
     );
     setSingleData(data.data);
     setLoading(false);
