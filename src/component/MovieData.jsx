@@ -10,12 +10,10 @@ const MovieData = () => {
   const [loading, setLoading] = useState(true);
 
   const getMovieData = async () => {
-    setLoading(true);
     const data = await axios.get(
       `http://www.omdbapi.com/?apikey=29c8ed77&s=${searchval}`
     );
     setMovieData(data.data.Search);
-    setLoading(false);
   };
 
   useEffect(() => {
