@@ -14,7 +14,7 @@ const MovieData = () => {
     const data = await axios.get(
       `https://www.omdbapi.com/?apikey=29c8ed77&s=${searchval}`
     );
-    setMovieData(data.data.Search);
+    setMovieData(data?.data?.Search);
     setLoading(false);
   };
 
@@ -70,14 +70,14 @@ const MovieData = () => {
         <>
           {loading && <Loading />}
           <div className="row px-4 m-5 gap-5">
-            {movieData.map((movie) => {
+            {movieData?.map((movie) => {
               return (
                 <div className="col-2 card py-3 my" key={movie.imdbID}>
                   <NavLink
                     className={"text-decoration-none"}
                     to={`/singleMovie/${movie?.imdbID}`}
                   >
-                    <div>
+                    <div style={{ hover: scale(1.5) }}>
                       <img
                         src={movie.Poster}
                         alt={movie.Title}
