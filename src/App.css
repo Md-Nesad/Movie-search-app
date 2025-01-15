@@ -10,6 +10,7 @@ body {
 .input-field {
   color: white;
   outline: none;
+  width: 700px;
   height: 60px;
   font-size: 20px;
   border-radius: 3px;
@@ -79,5 +80,16 @@ body {
   }
   .input-field {
     width: 350px;
+  }
+  .logo-size {
+    height: 100px;
+  }
+  .movie {
+    width: 350px;
+    text-align: center;
+  }
+  .title-text {
+    text-align: center;
+    font-size: 14px;
   }
 }

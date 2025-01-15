@@ -69,14 +69,14 @@ const MovieData = () => {
       {movieData ? (
         <>
           {loading && <Loading />}
-          <div className="row px-4 m-5 gap-5">
+          <div className="row px-4 m-5 gap-5 movie">
             {movieData?.map((movie) => {
               return (
                 <div
                   className="col-sm-3 col-md-3 col-lg-2 card py-3 my"
                   key={movie.imdbID}
                 >
-                  <div>
+                  <div className="col-12 ">
                     <NavLink
                       className={"text-decoration-none"}
                       to={`/singleMovie/${movie?.imdbID}`}
