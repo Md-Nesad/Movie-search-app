@@ -37,7 +37,7 @@ const MovieData = () => {
     <>
       <div className="container-fluid">
         <div className="row px-4">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
             <div className="colors">
               <h1>Watch here your favorite</h1>
               <p>
@@ -72,24 +72,28 @@ const MovieData = () => {
           <div className="row px-4 m-5 gap-5">
             {movieData?.map((movie) => {
               return (
-                <div className="col-2 card py-3 my" key={movie.imdbID}>
-                  <NavLink
-                    className={"text-decoration-none"}
-                    to={`/singleMovie/${movie?.imdbID}`}
-                  >
-                    <div>
+                <div
+                  className="col-sm-3 col-md-3 col-lg-2 card py-3 my"
+                  key={movie.imdbID}
+                >
+                  <div>
+                    <NavLink
+                      className={"text-decoration-none"}
+                      to={`/singleMovie/${movie?.imdbID}`}
+                    >
                       <img
                         src={movie.Poster}
                         alt={movie.Title}
                         className="movie-cart"
                       />
-                      <div className="py-2">
-                        <p className="colors fs-5 text-center m-0 title-text">
-                          {movie.Title}
-                        </p>
-                      </div>
+                    </NavLink>
+                    <div className="py-2">
+                      <p className="colors fs-5 text-center m-0 title-text">
+                        {movie.Title} <br />
+                        {movie.Year}
+                      </p>
                     </div>
-                  </NavLink>
+                  </div>
                 </div>
               );
             })}

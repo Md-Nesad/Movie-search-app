@@ -71,3 +71,13 @@ body {
   overflow: hidden;
   outline: none;
 }
+/* mobile responsive */
+@media only screen and (max-width: 600px) {
+  .colors {
+    font-size: 14px;
+    width: 345px;
+  }
+  .input-field {
+    width: 350px;
+  }
+}
