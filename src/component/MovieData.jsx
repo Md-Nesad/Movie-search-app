@@ -56,7 +56,7 @@ const MovieData = () => {
             value={inputValue}
             onChange={handleInputValue}
             type="text"
-            className="md:w-96 h-12 outline-none border-o rounded-md px-2 text-lg bg-[#77c6e8] text-white placeholder:text-gray-300"
+            className="md:w-96 w-[220px] h-12 outline-none border-o rounded-md px-2 text-lg bg-[#77c6e8] text-white placeholder:text-gray-300"
             placeholder="search your movie here"
           />
           <Button
