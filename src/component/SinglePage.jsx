@@ -48,7 +48,7 @@ const SinglePage = () => {
           />
         </div>
 
-        <div className="text-white space-y-5 mt-10 px-3">
+        <div className="text-white space-y-5 mt-10 px-3 pb-10">
           <h3 className="text-2xl">{singelData.Title}</h3>
           <p className="w-[345px]">{singelData.Plot}</p>
           <h4>
@@ -67,7 +67,7 @@ const SinglePage = () => {
           <h4>
             <span className=" underline">Writer </span> : {singelData.Writer}
           </h4>
-          <h4 className="pb-20">
+          <h4>
             <span className=" underline">Director </span> :{" "}
             {singelData.Director}
           </h4>
