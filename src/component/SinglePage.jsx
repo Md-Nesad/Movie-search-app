@@ -25,34 +25,52 @@ const SinglePage = () => {
   return (
     <>
       <h4 className="text-white text-center my-3">
-        Year : <span className="title">{singelData.Year}</span>
+        Year :{" "}
+        <span className="bg-[#77c6e8] px-4 py-2 rounded-sm">
+          {singelData.Year}
+        </span>
       </h4>{" "}
       <hr className="text-white" />
+      <button
+        className="text-[#77c6e8] underline ml-5 hover:text-white transition-colors"
+        onClick={() => navigate("/")}
+      >
+        Back to home
+      </button>
       {loading && <Loading />}
       {/* movie details */}
-      <div className="container">
-        <div className="row gap-5 ">
-          <div className="col-4 images">
-            <img
-              className="singleImage"
-              src={singelData.Poster}
-              alt={singelData.Title}
-            />
-          </div>
+      <div className=" md:flex md:justify-around md:items-center">
+        <div>
+          <img
+            className="singleImage drop-shadow-md px-3"
+            src={singelData.Poster}
+            alt={singelData.Title}
+          />
+        </div>
 
-          <div className="col-7 gap-5 text-white mt-5 py-5">
-            <h3>{singelData.Title}</h3>
-            <p>{singelData.Plot}</p>
-            <h4>Released : {singelData.Released}</h4>
-            <h5>Actors : {singelData.Actors}</h5>
-            <h4>Awards : {singelData.Awards}</h4>
-            <h4>Ratings : {singelData.imdbRating} ***</h4>
-            <h4>Writer : {singelData.Writer}</h4>
-            <h4>Director : {singelData.Director}</h4>
-          </div>
-          <button className="back-Button" onClick={() => navigate("/")}>
-            Back to home
-          </button>
+        <div className="text-white space-y-5 mt-10 px-3">
+          <h3 className="text-2xl">{singelData.Title}</h3>
+          <p className="w-[345px]">{singelData.Plot}</p>
+          <h4>
+            <span className=" underline">Released </span>: {singelData.Released}
+          </h4>
+          <h5>
+            <span className=" underline">Actors </span> : {singelData.Actors}
+          </h5>
+          <h4>
+            <span className=" underline">Awards </span> : {singelData.Awards}
+          </h4>
+          <h4>
+            <span className=" underline">Ratings </span> :{" "}
+            {singelData.imdbRating} ***
+          </h4>
+          <h4>
+            <span className=" underline">Writer </span> : {singelData.Writer}
+          </h4>
+          <h4>
+            <span className=" underline">Director </span> :{" "}
+            {singelData.Director}
+          </h4>
         </div>
       </div>
     </>
