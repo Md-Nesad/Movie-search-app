@@ -67,7 +67,7 @@ const SinglePage = () => {
           <h4>
             <span className=" underline">Writer </span> : {singelData.Writer}
           </h4>
-          <h4>
+          <h4 className="pb-20">
             <span className=" underline">Director </span> :{" "}
             {singelData.Director}
           </h4>
