@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./component/Navbar";
 import SinglePage from "./component/SinglePage";
 import Home from "./component/Home";
+import "./index.css";
 
 export default function App() {
   return (

@@ -1,7 +1,7 @@
 function Loading() {
   return (
     <>
-      <h2 className="text-white loaidng">Loading...</h2>
+      <h2 className="text-lg text-center text-white font-bold">Loading...</h2>
     </>
   );
 }

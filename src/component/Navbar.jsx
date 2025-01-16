@@ -1,12 +1,8 @@
 const Navbar = () => {
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-12">
-            <img src="/logo.jpg" alt="logo" className="logo-size" />
-          </div>
-        </div>
+      <div className="pl-5 pt-4">
+        <img src="/logo.jpg" alt="logo" className="md: h-[100px]" />
       </div>
     </>
   );
